@@ -12,7 +12,7 @@ def calculateSum(n):
 a = [randint (0, 100) for i in range (10)]
 print('Исходный массив', a)
 
-a = sorted(a, reverse = True, key=calculateSum)
+a.sort(reverse = True, key=calculateSum)
 print('Отсортированный массив', a)
 
 
