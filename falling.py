@@ -6,20 +6,13 @@ def calculateSum(n):
     while(n):
         sum += n % 10
         n //= 10
-    return sum  
-
-def bubbleSort(array):
-    arrayMaxIdx = len(array) - 1
-    for i in range(arrayMaxIdx):
-        for j in range(arrayMaxIdx - i):
-            if calculateSum(array[j+1]) > calculateSum(array[j]):
-                array[j], array[j+1] = array[j+1], array[j]
+    return sum 
 
 
 a = [randint (0, 100) for i in range (10)]
 print('Исходный массив', a)
 
-bubbleSort(a)
+a = sorted(a, reverse = True, key=calculateSum)
 print('Отсортированный массив', a)
 
 
